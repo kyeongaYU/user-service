@@ -18,7 +18,7 @@ import com.budgetmate.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class AuthController {
 
