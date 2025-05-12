@@ -35,7 +35,9 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+    	
         return roles.stream().map(SimpleGrantedAuthority::new).toList();
+        
     }
 
     @Override public String getUsername() { return email; }
@@ -43,4 +45,5 @@ public class User implements UserDetails {
     @Override public boolean isAccountNonLocked() { return true; }
     @Override public boolean isCredentialsNonExpired() { return true; }
     @Override public boolean isEnabled() { return true; }
+    
 }
